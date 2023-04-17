@@ -1,1 +1,8 @@
-<p>event-card works!</p>
+<div>
+    <h1>{{event.title}}</h1>
+    <h2>{{event.subtitle}}</h2>
+    <img [src]=event.image [alt]=event.title>
+    <p>{{event.startDate | date:'dd/MM/yyyy'}} - {{event.endDate | date:'dd/MM/yyyy'}}</p>
+    <p [innerHTML]="event.description" class="description"></p>
+    <a routerLink="/event-details/{{event.id}}">Comprar</a>
+</div>

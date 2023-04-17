@@ -8,6 +8,8 @@ import { EventDetailComponent } from './pages/event-detail/event-detail.componen
 import { EventCardComponent } from './components/event-card/event-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CartComponent } from './components/cart/cart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule ,
+    CommonModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

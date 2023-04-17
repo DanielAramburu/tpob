@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+}
+app-event-card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+/* Media query for mobiles */
+@media screen and (max-width: 767px) {
+    app-event-card{
+        width: 100%;
+    }
+    main{
+        width: 90%;
+    }
+}
+  
+/* Media query for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    main{
+        width: 80%;
+    }
+}
