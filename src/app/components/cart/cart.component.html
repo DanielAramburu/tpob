@@ -1,9 +1,9 @@
 <div *ngFor="let item of CartService.myCart">
     <h1>{{item.title}}</h1>
-    <div>
-        <p>{{item.date | date:'dd/MM/yyyy'}}</p>
+    <div *ngFor="let ticket of item.ticket">
+        <p>{{ticket.date | date:'dd/MM/yyyy'}}</p>
         <div>
-            <p>{{item.quantity}}</p>
+            <p>{{ticket.quantity}}</p>
             <button (click)="deleteFromCart(item.id)"><img src="../../../assets/img/trash.png" alt="trash"></button>
         </div>
     </div>

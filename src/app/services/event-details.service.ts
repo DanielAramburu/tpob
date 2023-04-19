@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class EventDetailsService {
 
   constructor( private http:HttpClient) { }
-  getEventDetails(url:string):Observable<any>{
+  getEventDetails(id:string):Observable<any>{
+    let url = `./../assets/data/event-info-${id}.json`
     return this.http.get(url)
   }
 }

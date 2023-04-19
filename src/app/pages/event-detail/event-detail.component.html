@@ -1,1 +1,20 @@
-<p>event-detail works!</p>
+<main>
+    <div>
+        <a routerLink="/events">Volver</a>
+    </div>
+    <div>
+        <section>
+            <div *ngFor="let item of sessionList">
+                <p>Fecha: {{item.date | date:'dd/MM/yyyy'}}, Disponibilidad: {{item.availability}}</p>
+                <div>
+                    <button (click)="checkRemove(item.date)">Menos</button>
+                    <p id="i">{{selectedTickets[item.date]}}</p>
+                    <button (click)="checkAdd(item.date)">Mas</button>
+
+
+                </div>
+            </div>
+        </section>
+        <app-cart></app-cart>
+    </div>
+</main>

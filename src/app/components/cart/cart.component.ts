@@ -13,6 +13,6 @@ export class CartComponent {
   }
 
   deleteFromCart(id:any){
-    console.log(id);
+    this.myCart = this.myCart.filter(event => event.id !== id)
   }
 }

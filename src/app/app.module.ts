@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +17,7 @@ import { CommonModule } from '@angular/common';
     EventDetailComponent,
     EventCardComponent,
     HeaderComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,
