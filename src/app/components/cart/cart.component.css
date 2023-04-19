@@ -1,0 +1,21 @@
+button{
+    appearance: none;
+    border: none;
+    background-color: transparent;
+}
+div.mainContent{
+    padding-left: 2vw;
+    width: 100%;
+}
+div.quantity{
+    display: flex;
+    align-items: center;
+}
+div.tickets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 40%;
+}

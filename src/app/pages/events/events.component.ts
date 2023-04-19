@@ -11,7 +11,6 @@ export class EventsComponent {
   constructor(private EventsService:EventsService){}
   ngOnInit(): void {
     this.EventsService.getEvents().subscribe((data:any)=>{
-      console.log('works')
       this.events = data
     }) 
   }

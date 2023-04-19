@@ -1,0 +1,44 @@
+div.return{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.mainContent{
+    display: flex;
+    width: 100%;
+}
+
+.tickets{
+    width: 60%;
+}
+
+section.tickets > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+
+div.count{
+    display: flex;
+}
+
+i-feather {
+    color: lightblue;
+}
+button{
+    appearance: none;
+    border: none;
+    background-color: transparent;
+}
+app-cart{
+    width: 40%;
+}

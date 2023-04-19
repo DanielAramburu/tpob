@@ -4,5 +4,5 @@
     <img [src]=event.image [alt]=event.title>
     <p>{{event.startDate | date:'dd/MM/yyyy'}} - {{event.endDate | date:'dd/MM/yyyy'}}</p>
     <p [innerHTML]="event.description" class="description"></p>
-    <a routerLink="/event-details/{{event.id}}" [queryParams]="{title: event.title}">Comprar</a>
+    <a routerLink="/event-details/{{event.id}}">Comprar</a>
 </div>

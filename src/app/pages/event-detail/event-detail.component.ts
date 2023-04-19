@@ -15,19 +15,15 @@ export class EventDetailComponent {
   public availability : any = {}
   public selectedTickets: any = {}
   private id:string | null = ''
-  private title:string | null = ''
   constructor(private CartService:CartService, private EventDetailsService:EventDetailsService, private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')
-    this.title = this.route.snapshot.queryParamMap.get('title')
-    console.log(this.id)
-    console.log(this.title)
     if (this.id !== null){
       this.EventDetailsService.getEventDetails(this.id).subscribe((data:any) => {
-        this.sessionList = data.sessions
+        this.sessionList = data.sessions.sort((a:any, b:any) => a.date - b.date);
+
         this.dbInfo = data
-        console.log(data)
         for (const iterator of this.sessionList) {
           iterator.dateFormat = new Date(iterator.date)
           this.availability[iterator.date] = iterator.availability
@@ -86,5 +82,8 @@ export class EventDetailComponent {
         }
       }
     }
+  }
+  cartChanged():void{
+    console.log(this.CartService.myCart)
   }
 }

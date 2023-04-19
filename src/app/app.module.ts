@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { IconsModule } from './icons/icons.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HttpClientModule ,
     CommonModule ,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
