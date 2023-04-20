@@ -29,8 +29,13 @@ export class EventDetailComponent {
           this.availability[iterator.date] = iterator.availability
           this.selectedTickets[iterator.date] = 0
         }
-
       })
+      let obj = this.CartService.myCart.find(obj => obj.id === this.id)
+      if (obj) {
+        for (const iterator of obj.ticket) {
+          this.selectedTickets[iterator.date] = iterator.quantity
+        }
+      }
     }
   }
 
@@ -83,7 +88,5 @@ export class EventDetailComponent {
       }
     }
   }
-  cartChanged():void{
-    console.log(this.CartService.myCart)
-  }
+  
 }

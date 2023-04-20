@@ -15,7 +15,9 @@ export class CartComponent {
 
   deleteFromCart(id:any , index:number){
     const sessions = this.CartService.myCart.find(item => item.id === id)
-    sessions?.ticket.splice(index,1)
+    if (sessions) {
+      sessions.ticket[index].quantity > 1 ? sessions.ticket[index].quantity-- : sessions.ticket.splice(index,1)
+    }
     if(sessions?.ticket.length === 0){
       this.CartService.myCart = this.CartService.myCart.filter(obj => obj.id !== id);
     }
